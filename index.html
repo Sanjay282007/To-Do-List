@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DODO - THE TASK PLANNER & FUNPLAYER</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>DODO - The Task Planner & FunPlayer</header>
+<div class="container">
+  <div class="pet-area">
+    <img class="pet-img" src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dog Pet">
+    <div class="speech" id="speech">Hi! I'm your task buddy!</div>
+    <button id="playGamesBtn">Play Games</button>
+    <div class="games-section" id="gamesSection">
+      <a href="https://poki.com/en/g/blocky-blast-puzzle" target="_blank">Blocky Blast Puzzle</a>
+      <a href="https://poki.com/en/g/parkour-race" target="_blank">Parkour Race</a>
+      <a href="https://poki.com/en/g/tic-tac-toe" target="_blank">Tic Tac Toe</a>
+      <a href="https://poki.com/en/g/bubble-shooter-lak" target="_blank">Bubble Shooter</a>
+    </div>
+  </div>
+  <div class="planner">
+    <div class="todo-input">
+      <input type="text" id="taskInput" placeholder="Enter task...">
+      <input type="date" id="taskDate">
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+    <div class="calendar-container">
+      <button class="nav-button" onclick="changeMonth(-1)" style="align-self:flex-start;">&lt;</button>
+      <div class="month-year" id="monthYear"></div>
+      <button class="nav-button" onclick="changeMonth(1)" style="align-self:flex-end;">&gt;</button>
+    </div>
+    <div class="calendar" id="calendar"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+header {
+    background: #ffcc66;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #4a2c00;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.pet-area {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.pet-img {
+    width: 150px;
+    max-width: 40vw;
+    animation: wag 1.5s infinite ease-in-out;
+}
+
+@keyframes wag {
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(5deg);}
+    75%{transform:rotate(-5deg);}
+    100%{transform:rotate(0deg);}
+}
+
+.speech {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    background: #fff8e6;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 140px;
+    word-wrap: break-word;
+}
+
+.planner {
+    flex: 2;
+    min-width: 300px;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.todo-input {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.todo-input input, .todo-input button {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.todo-input input[type="text"] {
+    flex: 2;
+    min-width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.todo-input input[type="date"] {
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid #ccc;
+}
+
+.todo-input button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todo-input button:hover {background: #388e3c; transform: scale(1.05);}
+
+ul {list-style:none;margin:10px 0;max-height:250px;overflow-y:auto;padding-right:5px;}
+li {background:#fff;margin:5px 0;padding:10px;border-radius:5px;display:flex;justify-content:space-between;align-items:center;}
+li span {flex:1; word-wrap: break-word;}
+li button {margin-left:5px;border:none;padding:5px 10px;border-radius:4px;cursor:pointer;transition:0.3s;}
+li button:hover {opacity:0.8; transform:scale(1.05);}
+
+.calendar-container {display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;}
+.calendar {margin-top:10px;background:#fff;padding:10px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);flex:1;overflow-x:auto;}
+.calendar table {border-collapse:collapse;width:100%;min-width:300px;}
+.calendar th, .calendar td {text-align:center;padding:8px;}
+.calendar th {background:#eee;}
+.calendar .today {background:#4caf50;color:#fff;border-radius:50%;}
+.calendar .has-task {background:#ffcc66;border-radius:50%;}
+
+.month-year {font-weight:bold;font-size:1.2em;text-align:center;flex:1;margin:5px 0;}
+
+.nav-button {
+    padding:5px 10px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.nav-button:hover {background:#1d4ed8; transform:scale(1.1);}
+
+#playGamesBtn {margin-top:15px;padding:10px 20px;background:#ff5722;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;}
+#playGamesBtn:hover {background:#e64a19; transform:scale(1.05);}
+
+.games-section {display:none;margin-top:15px;text-align:center;}
+.games-section a {display:inline-block;margin:10px;padding:10px 20px;background:#ff5722;color:#fff;border-radius:8px;text-decoration:none;transition:0.3s;}
+.games-section a:hover {background:#e64a19; transform:scale(1.05);}
+
+@media (max-width: 768px) {
+    .container {flex-direction: column; align-items:center;}
+    .planner {max-width: 100%;}
+    .pet-img {width:120px;}
+}
+
